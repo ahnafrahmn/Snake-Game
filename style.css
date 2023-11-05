@@ -1,0 +1,92 @@
+body,
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+.main{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(46, 55, 55);
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+
+}
+
+.scoreBoard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(87, 208, 130);
+    width: 35vw;
+    padding: 10px 0 10px 0;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.scoreBoard .txt{
+    margin-right: 5px;
+}
+
+.box {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(87, 208, 130);
+    width: 35vw;
+    aspect-ratio: 1/1;
+    border-radius: 5px;
+    padding: 3px;
+    grid-template-columns: repeat(30, minmax(1px, 1fr));
+    gap: 0px;
+    cursor: none;
+    overflow: hidden;
+}
+
+.tile {
+    margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.052); 
+    justify-content: space-evenly;
+    aspect-ratio: 1/1;
+}
+  
+.snake-body, 
+.fruit{
+    border: black solid;
+    background-color: black;
+    transition: all 1ms ease ;
+}
+
+.fruit{
+    width: 1vw;
+    border-radius: 3px;
+    border: transparent;
+    background-color: rgb(121, 5, 5);
+}
+
+
+@media (max-width: 700px) {
+    html, body{
+        overflow: hidden;
+    }
+    .scoreBoard{
+        width: 90vw;
+        padding: 10px 0 10px 0;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    .box {
+        width: 90vw;
+        padding: 3px;
+    }
+    .fruit{
+        width: 3vw;
+    }
+}
